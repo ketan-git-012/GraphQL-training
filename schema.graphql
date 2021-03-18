@@ -1,0 +1,30 @@
+type Query {
+    test : String,
+    data : String,
+    Greentings : String,
+    students : [Students],
+    studentById(id: ID!) : Students
+    sayHello(name : String) : String
+}
+
+type Mutation{
+    createStudent(collegeId:ID, firstName: String, email : String) : String
+}
+
+
+
+type Students {
+   id:ID!
+   firstName: String
+   email: String
+   collegeId:String
+   fullName : String
+   college : College
+}
+
+type College{
+    id : ID!
+    name : String
+    location : String
+}
+
